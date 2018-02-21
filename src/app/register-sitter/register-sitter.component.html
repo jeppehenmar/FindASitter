@@ -1,0 +1,57 @@
+<form [formGroup]="registerSitterForm" novalidate (submit)="onSubmitRegister(registerSitterForm)">
+
+  <div>
+    <label>First name:
+      <input formControlName="firstname">
+    </label>
+  </div>
+
+  <div>
+    <label>Last name:
+      <input formControlName="lastname">
+    </label>
+  </div>
+
+  <div>
+    <label>Age:
+      <input formControlName="age">
+    </label>
+  </div>
+
+  <div>
+    <label>Years of experience:
+      <input formControlName="yearsOfExperience">
+    </label>
+  </div>
+
+  <div>
+    <label>Region:
+      <input formControlName="region">
+    </label>
+  </div>
+
+  <div>
+    <label>Gender:
+      <input formControlName="gender">
+    </label>
+  </div>
+
+  <div>
+    <label>Phone:
+      <input formControlName="phone">
+    </label>
+  </div>
+
+  <div class="error" *ngIf="registerSitterForm.controls.firstname.errors?.required && registerSitterForm.controls.firstname.touched ||
+                               registerSitterForm.controls.lastname.errors?.required && registerSitterForm.controls.lastname.touched ||
+                               registerSitterForm.controls.age.errors?.required && registerSitterForm.controls.age.touched ||
+                               registerSitterForm.controls.yearsOfExperience.errors?.required && registerSitterForm.controls.yearsOfExperience.touched ||
+                               registerSitterForm.controls.region.errors?.required && registerSitterForm.controls.region.touched ||
+                               registerSitterForm.controls.gender.errors?.required && registerSitterForm.controls.gender.touched ||
+                               registerSitterForm.controls.phone.errors?.required && registerSitterForm.controls.phone.touched">
+    Please fill out all fields
+  </div>
+
+  <button type="submit">Register</button>
+
+</form>

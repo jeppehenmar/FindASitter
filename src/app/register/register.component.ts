@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormGroup, FormBuilder} from "@angular/forms";
+import {FormGroup, FormBuilder, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-register',
@@ -14,17 +14,16 @@ export class RegisterComponent implements OnInit {
 
   onSubmitRegister(registerForm){
     console.log(registerForm)
+    if(registerForm.valid){
+      console.log("Register form valid")
+    } else {
+      console.log("Register form invalid")
+    }
   }
 
   createForm(){
     this.registerForm = this.fb.group({
-      firstname: [''],
-      lastname: [''],
-      age: [''],
-      yearsOfExperience: [''],
-      region: [''],
-      gender: [''],
-      phone: ['']
+      type: ['a', Validators.required]
     });
   }
 

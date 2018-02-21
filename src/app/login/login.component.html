@@ -10,18 +10,18 @@
     </div>
   </div>
 
-  <label>Password:
-
-    <input type="password" formControlName="password">
+  <div>
+    <label>Password:
+      <input type="password" formControlName="password">
+    </label>
 
     <div class="error" *ngIf="loginForm.controls.password.errors?.required && loginForm.controls.password.touched">
       Please fill out the password
     </div>
+  </div>
 
-  </label>
+  <button type="submit">Login</button>
 
-  <button type="submit" [disabled]="loginForm.invalid">Login</button>
-
-  <p>Is form valid: {{ loginForm.status | json }}</p>
+  <!--p>Is form valid: {{ loginForm.status | json }}</p-->
 
 </form>

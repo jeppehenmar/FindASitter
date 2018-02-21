@@ -20,11 +20,11 @@ export class LoginComponent implements OnInit {
     // Try to login
     if (loginForm.valid){
       // Send an http request
-      console.log("valid")
+      console.log("Login form valid")
     } else{
       //Show errors and not send a request
       alert("Fill out the fields")
-      console.log("invalid")
+      console.log("Login form invalid")
     }
   }
 
