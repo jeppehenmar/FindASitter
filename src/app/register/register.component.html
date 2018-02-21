@@ -1,0 +1,73 @@
+<form [formGroup]="registerForm" novalidate (submit)="onSubmitRegister(registerForm)">
+
+  <div>
+    <label> First name:
+      <input formControlName="firstname">
+    </label>
+
+    <div class="error" *ngIf="registerForm.controls.firstname.errors?.required && registerForm.controls.firstname.touched">
+      Please fill out your first name
+    </div>
+  </div>
+
+  <div>
+    <label> Last name:
+      <input formControlName="lastname">
+
+      <div class="error" *ngIf="registerForm.controls.firstname.errors?.required && registerForm.controls.firstname.touched">
+        Please fill out your first name
+      </div>
+
+    </label>
+  </div>
+
+  <div>
+    <label> Age:
+      <input formControlName="age">
+
+      <div class="error" *ngIf="registerForm.controls.firstname.errors?.required && registerForm.controls.firstname.touched">
+        Please fill out your first name
+      </div>
+
+    </label>
+  </div>
+
+  <div>
+    <label> Years of experience:
+      <input formControlName="yearsOfExperience">
+    </label>
+  </div>
+
+  <div>
+    <label> Region:
+      <input formControlName="region">
+    </label>
+  </div>
+
+  <div>
+    <label> Gender:
+      <input formControlName="gender">
+    </label>
+  </div>
+
+  <div>
+    <label> Phone:
+      <input formControlName="phone">
+    </label>
+  </div>
+
+  <div class="error" *ngIf="registerForm.controls.firstname.errors?.required && registerForm.controls.firstname.touched ||
+                             registerForm.controls.lastname.errors?.required && registerForm.controls.lastname.touched ||
+                             registerForm.controls.age.errors?.required && registerForm.controls.age.touched ||
+                             registerForm.controls.yearsOfExperience.errors?.required && registerForm.controls.yearsOfExperience.touched ||
+                             registerForm.controls.region.errors?.required && registerForm.controls.region.touched ||
+                             registerForm.controls.gender.errors?.required && registerForm.controls.gender.touched ||
+                             registerForm.controls.phone.errors?.required && registerForm.controls.phone.touched">
+    Please fill out all textfields
+  </div>
+
+  <div>
+    <button type="submit">Register</button>
+  </div>
+
+</form>
