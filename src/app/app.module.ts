@@ -9,6 +9,9 @@ import { RegisterComponent } from './register/register.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { RegisterSitterComponent } from './register-sitter/register-sitter.component';
 import { RegisterBabyComponent } from './register-baby/register-baby.component';
+import { ContactComponent } from './contact/contact.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -17,7 +20,10 @@ import { RegisterBabyComponent } from './register-baby/register-baby.component';
     LoginComponent,
     RegisterComponent,
     RegisterSitterComponent,
-    RegisterBabyComponent
+    RegisterBabyComponent,
+    ContactComponent,
+    PageNotFoundComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

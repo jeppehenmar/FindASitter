@@ -23,7 +23,7 @@ export class RegisterComponent implements OnInit {
 
   createForm(){
     this.registerForm = this.fb.group({
-      type: ['a', Validators.required]
+      type: ['', Validators.required]
     });
   }
 

@@ -11,11 +11,11 @@
 
   <br/>
 
-  <div *ngIf="registerForm.get('type').value == 'sitter'">
+  <div *ngIf="registerForm.controls.type.value == 'sitter'">
     <app-register-sitter></app-register-sitter>
   </div>
 
-  <div *ngIf="registerForm.get('type').value == 'baby'">
+  <div *ngIf="registerForm.controls.type.value == 'baby'">
     <app-register-baby></app-register-baby>
   </div>
 
