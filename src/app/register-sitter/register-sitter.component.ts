@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormBuilder, Validators} from "@angular/forms";
+import {Sitter} from "../entities/sitter";
+import {DataService} from "../data.service";
 
 @Component({
   selector: 'app-register-sitter',
@@ -10,14 +12,16 @@ export class RegisterSitterComponent implements OnInit {
 
   private registerSitterForm: FormGroup;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private data: DataService) { }
 
   onSubmitRegister(registerSitterForm){
     if(registerSitterForm.valid){
-      console.log("Register form valid")
+      let sitter: Sitter = registerSitterForm.value;
+      console.log("Register form valid");
+      this.data.addSitter(sitter)
     } else {
-      alert("Please fill out all fields")
-      console.log(registerSitterForm)
+      alert("Please fill out all fields");
+      console.log(registerSitterForm);
       console.log("Register form invalid")
     }
   }

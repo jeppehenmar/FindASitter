@@ -2,7 +2,7 @@
 
   <div>
     <label>Username:
-      <input formControlName="username">
+      <input id="username" formControlName="username">
     </label>
 
     <div class="error" *ngIf="loginForm.controls.username.errors?.required && loginForm.controls.username.touched">
@@ -12,7 +12,7 @@
 
   <div>
     <label>Password:
-      <input type="password" formControlName="password">
+      <input id="password" type="password" formControlName="password">
     </label>
 
     <div class="error" *ngIf="loginForm.controls.password.errors?.required && loginForm.controls.password.touched">
@@ -20,7 +20,7 @@
     </div>
   </div>
 
-  <button type="submit">Login</button>
+  <button id="login" type="submit">Login</button>
 
   <!--p>Is form valid: {{ loginForm.status | json }}</p-->
 

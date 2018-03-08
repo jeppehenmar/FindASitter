@@ -12,6 +12,11 @@ import { RegisterBabyComponent } from './register-baby/register-baby.component';
 import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
+import {AuthGuard} from "./auth-guard";
+import {AuthService} from "./auth.service";
+import {DataService} from "./data.service";
+import { ViewBabiesComponent } from './view-babies/view-babies.component';
+import { ViewSittersComponent } from './view-sitters/view-sitters.component';
 
 
 @NgModule({
@@ -23,14 +28,16 @@ import { HomeComponent } from './home/home.component';
     RegisterBabyComponent,
     ContactComponent,
     PageNotFoundComponent,
-    HomeComponent
+    HomeComponent,
+    ViewBabiesComponent,
+    ViewSittersComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AuthGuard, AuthService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

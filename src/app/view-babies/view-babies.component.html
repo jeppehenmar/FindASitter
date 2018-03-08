@@ -1,0 +1,23 @@
+<div>
+  <h1>Babies</h1>
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Postal code</th>
+      <th>Gender</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let baby of data.babies">
+      <td>{{baby.firstName}}</td>
+      <td>{{baby.age}}</td>
+      <td>{{baby.postalCode}}</td>
+      <td>{{baby.gender}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

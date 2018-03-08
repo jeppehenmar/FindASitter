@@ -1,5 +1,5 @@
 export class Baby {
-  public firstname: String;
+  public firstName: String;
   public postalCode: String;
   public picture: String;
   public age: number; //months
