@@ -69,6 +69,7 @@ describe('Sitters test', () => {
       element(by.id('gender')).sendKeys("Test - Female")
       element(by.id('phone')).sendKeys("Test - 10203040")
 
+      //Submitting
       element(by.id('e2e-submit')).click();
 
       element.all(by.css('e2e-sitter')).then(function (elementsAfter) {
